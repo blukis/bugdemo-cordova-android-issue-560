@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<widget xmlns = "http://www.w3.org/ns/widgets"
+		xmlns:gap = "http://phonegap.com/ns/1.0"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		id = "test.app.example"
+		version = "0.1.0">
+	<!-- /apps/1980788/builds (appid shared with other plurib-apps) -->
+		
+	<name>Test app</name>
+	<description>App Description</description>
+	<author email="test@gmail.com" href="http://google.com/">Test</author>
+	
+	<preference name="phonegap-version" value="cli-9.0.0" />
+	<platform name="android" />
+
+	<content src="index.html" />
+
+	<!-- Plugins -->
+	<plugin name="cordova-plugin-whitelist" version="1.3.3" />
+	
+		<preference name="android-minSdkVersion" value="21" /> <!-- 21=lollipop, first w/ upgradable webview.  19=KitKat, with chrome v30, has no MediaStreamTrack.getSources() support. -->
+		<preference name="android-targetSdkVersion" value="26" /> <!-- >= 23 is new Android permissions model -->
+
+		<gap:config-file platform="android" parent="/manifest"> <!-- for remote debugging -->
+			 <application android:debuggable="true" />
+		</gap:config-file>
+	
+	
+	<!-- Icons -->
+	<icon src="res/icon/icon512.png"/>
+	
+	<!-- Splash screens -->
+	<splash src="res/screen/splash960x720.png"/>
+
+	<preference name="permissions" value="none"/>
+	
+	<allow-intent href="mailto:*" />
+	<access origin="*://plurib.us" />
+	<access origin="*://*.plurib.us" />
+	
+</widget>
