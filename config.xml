@@ -16,6 +16,11 @@
 
 	<content src="index.html" />
 
+	<!-- ionic preferences -->
+	<preference name="Scheme" value="https" />
+	<preference name="HostName" value="app" />
+	<allow-navigation href="https://app/*" />
+
 	<!-- Plugins -->
 	<plugin name="cordova-plugin-whitelist" version="1.3.3" />
 	
